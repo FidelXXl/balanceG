@@ -30,7 +30,7 @@
                             <div class="col-lg-4">
                                 <label class="center" for="Activos">Monto</label>
                                 <div class="form-group">
-                                    <input type="number" class="form-control form-control-lg" [(ngModel)]="cantidad1" (keyup.enter)="sumadosv()"
+                                    <input type="number" class="form-control form-control-lg" [(ngModel)]="dinero" (keyup.enter)="sumadosv()"
                                     id="nombres" placeholder="$">   
                                 </div>
                             </div> 
@@ -50,7 +50,7 @@
                             <td>{{balance.tipos}}</td>
                             <td>{{balance.id}}</td>  
                             <td>{{balance.nombre}}</td>
-                            <td></td>
+                            <td>{{balance.dinero}}</td>
                             <td>
                                 <i class="fas fa-trash text-danger"></i>
                                 <i class="fas fa-check-circle text-primary"></i>  
@@ -107,7 +107,7 @@
                             <td></td>
                             <td>Total</td>
                             <td></td>
-                            <td>{{total1}}</td>
+                            <td sumadosv>{{totalA}}</td>
                         
                             <td>
                                 <i class="fas fa-trash text-danger"></i>

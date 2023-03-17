@@ -19,11 +19,12 @@ export class BalanceComponent {
   cantidad2 : number = 0;
   cantidad3 : string = " ";
   cantidad4 : string = " ";
-  total1: number = 0;
+  totalA: number = 0;
   balances1 = '';
   balance2 = '';
   contener =0;
   tipos = '';
+  dinero: number=0;
 
  debhab: string[] = ['Activo','Pasivo','Capital'];
 
@@ -41,8 +42,10 @@ ngOnInit(): void {
 
 sumadosv(): void
 {
-  this.contener = this.cantidad1 + this.contener
-  this.total1 =this.contener;
+  if(this.Activos === 'Activo')
+  {
+    this.totalA = this.totalA + this.dinero
+  }
 }
 
 agregarBalance():void
@@ -55,6 +58,7 @@ agregarBalance():void
   estado: false,
   cantidad : this.cantidad1,
   tipos : this.tipos,
+  dinero:this.dinero
   
   
   }
