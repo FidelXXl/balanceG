@@ -1,0 +1,138 @@
+<div class="container nt-8">
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+            
+                <div class="card-body text-center">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <label class="center" for="Activos">Clase</label> 
+                                <div class="form-group">
+                                  <select class="form-control form-control-lg" id="tengo" [(ngModel)]="tipos" (keyup.enter)="agregarBalance()"> 
+                                    <option *ngFor="let tipo of tipo">{{ tipo }}</option>
+                                </select>  
+                                </div>
+                            </div> 
+                            <div class="col-lg-4">
+                              <label class="center" for="Activos">Tipo</label> 
+                              <div class="form-group">
+                                <select class="form-control form-control-lg" id="tengo" [(ngModel)]="Activos" (keyup.enter)="agregarBalance()"> 
+                                  <option *ngFor="let debhab of debhab">{{ debhab }}</option>
+                              </select>  
+                              </div>
+                          </div>    
+                            <div class="col-lg-4">
+                                <label class="center" for="Activos">Nombre de cuenta</label>
+                                <div class="form-group">
+                                    <input type="string" class="form-control form-control-lg" [(ngModel)]="balances1" (keyup.enter)="agregarBalance()"
+                                    id="cantidad1" placeholder="Ingresas atributos nuevos..."> 
+                                </div>
+                            </div> 
+                            <div class="col-lg-4">
+                                <label class="center" for="Activos">Monto</label>
+                                <div class="form-group">
+                                    <input type="number" class="form-control form-control-lg" [(ngModel)]="cantidad1" (keyup.enter)="sumadosv()"
+                                    id="nombres" placeholder="$">   
+                                </div>
+                            </div> 
+                    <table class="table color">
+                        <thead>
+                          <tr>
+                            <th scope="col">Clase</th>
+                            <th scope="col">Tipo</th>
+                            <th scope="col">Cuenta</th>
+                            <th scope="col">Monto</th>
+                            <th scope="col">Eliminar/Editar</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let balance of listabal1">
+                          
+                            <td>{{balance.tipos}}</td>
+                            <td>{{balance.id}}</td>  
+                            <td>{{balance.nombre}}</td>
+                            <td></td>
+                            <td>
+                                <i class="fas fa-trash text-danger"></i>
+                                <i class="fas fa-check-circle text-primary"></i>  
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>circulante</td>
+                            <td>Activos</td>
+                            <td>Banco</td>
+                            <td>240,000</td>
+                         
+                            <td>
+                                <i class="fas fa-trash text-danger"></i>
+                                <i class="fas fa-check-circle text-primary"></i>  
+                            </td>
+                          </tr>
+                          <tr>
+                            
+                            <td>circulante</td>
+                            <td>Activos</td>
+                            <td>Clientes</td>
+                            <td>245,000</td>
+                       
+                            <td>
+                                <i class="fas fa-trash text-danger"></i>
+                                <i class="fas fa-check-circle text-primary"></i>  
+                            </td>
+                          </tr>
+                          <tr>
+                           
+                            <td>circulante</td>
+                            <td>Activos</td>
+                            <td>Almacen</td>
+                            <td>300,000</td>
+                          
+                            <td>
+                                <i class="fas fa-trash text-danger"></i>
+                                <i class="fas fa-check-circle text-primary"></i>  
+                            </td>
+                          </tr>
+                          <tr>
+                            
+                            <td>circulante</td>
+                            <td>Activos</td>
+                            <td>Deudores diveros</td>
+                            <td>300,000</td>
+                           
+                            <td>
+                                <i class="fas fa-trash text-danger"></i>
+                                <i class="fas fa-edit text-primary"></i>  
+                            </td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td>Total</td>
+                            <td></td>
+                            <td>{{total1}}</td>
+                        
+                            <td>
+                                <i class="fas fa-trash text-danger"></i>
+                                <i class="fas fa-edit text-primary"></i>  
+                            </td>
+                          </tr>
+                          <tr>
+                          
+                            <td>Circulante</td>
+                            <td>Activo</td>
+                            <td>Caja</td>
+                            <td>300,000</td>
+                            
+                            <td>
+                                <i class="fas fa-trash text-danger"></i>
+                                <i class="fas fa-edit text-primary"></i>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
